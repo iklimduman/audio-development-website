@@ -7,6 +7,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment:fixed
 }
 
 body{
@@ -14,11 +15,8 @@ body{
 }
 
 #heading-table{
-  position: absolute;
-  margin-left : 20% ;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+  width : 800px;
+  margin : 0 auto;
 }
 
 .heading {
@@ -29,37 +27,64 @@ body{
   text-shadow: 3px 0 red;
 }
 
+.heading-2{
+  font-size : 36px;
+  font-family : "Shadows Into Light", cursive;
+  color: #DBEDF3;
+  text-shadow: 3px 0 red;
+}
+
 .image{
   margin-top : 2%;
 }
 
 #beat-table{
-  position: absolute;
-  top :40%;
-  right: 10%;
+  width : 500px ;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: center;
+}
+
+.table-data{
+  width : 20% ;
+
+}
+
+#beat-table td{
 }
 
 .play-button{
-  width: 80px;
-  height: 80px;
+  text-align: right;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
   background: transparent;
   align-items: center;
   border-radius: 50%;
+  border-color : transparent ;
   position: relative;
-  margin-top: 5%;
-  display: block;
+  margin-top: 1%;
+  margin-left : 10%;
+  display: flex;
   box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
 }
 
 .play-button::after {
   content: "";
   position: absolute;
-  left : 25px;
+  left : 20px;
   top: 25%;
   width: 0;
   height: 0;
-  border-top: 20px solid transparent;
-  border-left: 35px solid #FBE6E1;
-  border-bottom: 20px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 15px solid #FBE6E1;
+  border-bottom: 10px solid transparent;
+}
 
+.beat-song{
+  width : 50%;
+  font-family: 'Redressed', cursive;
+  font-size : 20px ;
+  color : #FBE6E1 ;
+  text-align : left ;
 }
