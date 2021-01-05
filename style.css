@@ -38,16 +38,144 @@ body{
   margin-top : 2%;
 }
 
+.image-border{
+  -webkit-filter: drop-shadow(1px 1px 0 orange)
+                  drop-shadow(-1px -1px 0 orange);
+  filter: drop-shadow(1px 1px 0 orange)
+          drop-shadow(-1px -1px 0 orange);
+  animation-name : image-border-animation ;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 #beat-table{
   width : 500px ;
   margin-right: 0;
   margin-left: auto;
   text-align: center;
+  float: right;
 }
+
+
+.audio-visualizer{
+  width : 50px ;
+  height : 50px ;
+  float : right ;
+  margin-top : -70px;
+  margin-right: 110px ;
+  position: relative ;
+  transform: translate(-200px, 70px);
+  animation-name: bar1;
+  box-shadow : 0 -30px 0 rgba(0,0,0,0);
+  animation-duration: 2s;
+  animation-delay : 0s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.audio-visualizer-2{
+  width : 50px ;
+  height : 50px ;
+  float : right ;
+  margin-top : -70px;
+  margin-right: 55px ;
+  position: relative ;
+  transform: translate(-200px, 70px);
+  animation-name: bar2;
+  animation-duration: 2s;
+  animation-delay : 0.5s ;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.audio-visualizer-3{
+  width : 50px ;
+  height : 50px ;
+  float : right ;
+  margin-top : -70px;
+  margin-right: 0px ;
+  position: relative ;
+  transform: translate(-200px, 70px);
+  animation-name: bar3;
+  animation-duration: 2s;
+  animation-delay : 1s ;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.audio-visualizer-4{
+  width : 50px ;
+  height : 50px ;
+  float : right ;
+  margin-top : -70px;
+  margin-right: -55px ;
+  position: relative ;
+  transform: translate(-200px, 70px);
+  animation-name: bar4;
+  animation-duration: 2s;
+  animation-delay : 1.5s ;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes bar1
+{
+  0% { box-shadow:0 -30px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,1)}
+  25% { box-shadow: 0 -30px 0 rgba(224,224,244,0.8),0 -45px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,0.6)}
+  50% { box-shadow: 0 -30px 0 rgba(224,224,244,0.6),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(224,224,244,0.4),
+     0 -90px 0 rgba(255,191,252,0.8)}
+  75% { box-shadow: 0 -30px 0 rgba(255,191,252,0.4),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(255,191,252,0.6),
+    0 -85px 0 rgba(0,0,0,0),0 -120px 0 rgba(255,191,252,0.6),0 -150px 0 rgba(0,0,0,0),0 -180px 0 rgba(255,191,252,0.8)}
+  100% { box-shadow: 0 -30px 0 rgba(255,114,252,0.8),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(255,114,252,0.8),
+    0 -85px 0 rgba(0,0,0,0),0 -90px 0 rgba(255,114,252,1), 0 -120px 0 rgba(255,114,252,1),0 -150px 0 rgba(0,0,0,0),
+    0 -180px 0 rgba(255,114,252,1)}
+}
+
+@keyframes bar2{
+  0% { box-shadow:0 -30px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,1)}
+  25% { box-shadow: 0 -30px 0 rgba(224,224,244,0.8),0 -45px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,0.6)}
+  50% { box-shadow: 0 -30px 0 rgba(224,224,244,0.6),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(224,224,244,0.4),
+     0 -90px 0 rgba(245,184,242,0.8)}
+  75% { box-shadow: 0 -30px 0 rgba(245,184,242,0.4),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(245,184,242,0.6),
+    0 -85px 0 rgba(0,0,0,0),0 -120px 0 rgba(245,184,242,0.6),0 -150px 0 rgba(0,0,0,0),0 -180px 0 rgba(245,184,242,0.8)}
+  100% { box-shadow: 0 -30px 0 rgba(255,114,252,0.8),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(255,114,252,0.8),
+    0 -85px 0 rgba(0,0,0,0),0 -90px 0 rgba(245,148,252,1), 0 -120px 0 rgba(245,148,252,1),0 -150px 0 rgba(0,0,0,0),
+    0 -180px 0 rgba(245,148,252,1)}
+  }
+
+@keyframes bar3{
+  0% { box-shadow:0 -30px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,1)}
+  25% { box-shadow: 0 -30px 0 rgba(224,224,244,0.8),0 -45px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,0.6)}
+  50% { box-shadow: 0 -30px 0 rgba(224,224,244,0.6),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(224,224,244,0.4),
+     0 -90px 0 rgba(235,174,232,0.8)}
+  75% { box-shadow: 0 -30px 0 rgba(235,174,232,0.4),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(235,174,232,0.6),
+    0 -85px 0 rgba(0,0,0,0),0 -120px 0 rgba(235,174,232,0.6),0 -150px 0 rgba(0,0,0,0),0 -180px 0 rgba(235,174,232,0.8)}
+  100% { box-shadow: 0 -30px 0 rgba(242,160,241,0.8),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(242,160,241,0.8),
+    0 -85px 0 rgba(0,0,0,0),0 -90px 0 rgba(242,160,241,1), 0 -120px 0 rgba(242,160,241,1),0 -150px 0 rgba(0,0,0,0),
+    0 -180px 0 rgba(242,160,241,1)}
+  }
+
+  @keyframes bar4{
+    0% { box-shadow:0 -30px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,1)}
+    25% { box-shadow: 0 -30px 0 rgba(224,224,244,0.8),0 -45px 0 rgba(0,0,0,0), 0 -30px 0 rgba(224,224,244,0.6)}
+    50% { box-shadow: 0 -30px 0 rgba(224,224,244,0.6),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(224,224,244,0.4),
+       0 -90px 0 rgba(225,164,222,0.8)}
+    75% { box-shadow: 0 -30px 0 rgba(225,164,222,0.6),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(225,164,222,0.4),
+      0 -85px 0 rgba(0,0,0,0),0 -120px 0 rgba(225,164,222,0.8),0 -150px 0 rgba(0,0,0,0),0 -180px 0 rgba(225,164,222,0.8)}
+    100% { box-shadow: 0 -30px 0 rgba(255,114,252,0.8),0 -45px 0 rgba(0,0,0,0), 0 -60px 0 rgba(255,114,252,0.8),
+      0 -85px 0 rgba(0,0,0,0),0 -90px 0 rgba(235,170,241,1), 0 -120px 0 rgba(235,170,241,1),0 -150px 0 rgba(0,0,0,0),
+      0 -180px 0 rgba(235,170,241,1)}
+    }
 
 .table-data{
   width : 20% ;
-
 }
 
 #beat-table td{
@@ -81,10 +209,28 @@ body{
   border-bottom: 10px solid transparent;
 }
 
+.pause{
+  border-style: double;
+  border-width: 0px 0px 0px 37px;
+  border-color: #202020;
+}
+
+
 .beat-song{
   width : 50%;
   font-family: 'Redressed', cursive;
   font-size : 20px ;
   color : #FBE6E1 ;
   text-align : left ;
+}
+
+@keyframes image-border-animation {
+
+  0% {-webkit-filter: drop-shadow(1px 2px 1px rgba(85,231,255))}
+  20%{-webkit-filter: drop-shadow(1px 4px 1px rgba(0,204,253))}
+  40%{-webkit-filter: drop-shadow(1px 6px 1px rgba(255,52,179))}
+  60%{-webkit-filter: drop-shadow(1px 8px 1px rgba(32,17,162))}
+  80%{-webkit-filter: drop-shadow(1px 10px 1px rgba(32,17,72))}
+  100%{-webkit-filter: drop-shadow(1px 12px 1px rgba(85,231,255)}
+
 }
