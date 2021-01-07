@@ -9,6 +9,49 @@ var audio_shaolin = new Audio("sounds/shaolin.mp3");
 var audioArray = [audio_audioBinger, audio_ketsa, audio_growingResistance, audio_yung, audio_shaolin];
 var activeSound;
 
+function whiteC(){
+  document.getElementById("white-c").classList.remove("shadow-c");
+  document.getElementById("white-c").offsetWidth ;
+  document.getElementById("white-c").classList.add("shadow-c");
+}
+
+function whiteA(){
+  document.getElementById("white-a").classList.remove("shadow-a");
+  document.getElementById("white-a").offsetWidth ;
+  document.getElementById("white-a").classList.add("shadow-a");
+}
+
+function whiteB(){
+  document.getElementById("white-b").classList.remove("shadow-b");
+  document.getElementById("white-b").offsetWidth ;
+  document.getElementById("white-b").classList.add("shadow-b");
+}
+
+function whiteG(){
+  document.getElementById("white-g").classList.remove("shadow-g");
+  document.getElementById("white-g").offsetWidth ;
+  document.getElementById("white-g").classList.add("shadow-g");
+}
+
+function whiteE(){
+  document.getElementById("white-e").classList.remove("shadow-e");
+  document.getElementById("white-e").offsetWidth ;
+  document.getElementById("white-e").classList.add("shadow-e");
+}
+
+function whiteF(){
+  document.getElementById("white-f").classList.remove("shadow-f");
+  document.getElementById("white-f").offsetWidth ;
+  document.getElementById("white-f").classList.add("shadow-f");
+}
+
+
+function whiteD(){
+  document.getElementById("white-d").classList.remove("shadow-d");
+  document.getElementById("white-d").offsetWidth ;
+  document.getElementById("white-d").classList.add("shadow-d");
+}
+
 function startAudioVisualizer(){
   document.getElementById("audio-vis").classList.add("audio-visualizer");
   document.getElementById("audio-vis-2").classList.add("audio-visualizer-2");
