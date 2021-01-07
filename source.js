@@ -9,6 +9,7 @@ var audio_shaolin = new Audio("sounds/shaolin.mp3");
 var audioArray = [audio_audioBinger, audio_ketsa, audio_growingResistance, audio_yung, audio_shaolin];
 var activeSound;
 
+// functions for white keys
 function whiteC(){
   document.getElementById("white-c").classList.remove("shadow-c");
   document.getElementById("white-c").offsetWidth ;
@@ -65,6 +66,41 @@ function stopAudioVisualizer(){
   document.getElementById("audio-vis-3").classList.remove("audio-visualizer-3");
   document.getElementById("audio-vis-4").classList.remove("audio-visualizer-4");
 }
+
+//functions for black keys
+
+function blackDB() {
+  document.getElementById("black-db-key").classList.remove("shadow-black-key");
+  document.getElementById("black-db-key").offsetWidth ;
+  document.getElementById("black-db-key").classList.add("shadow-black-key");
+}
+
+function blackEB() {
+  document.getElementById("black-eb-key").classList.remove("shadow-black-key");
+  document.getElementById("black-eb-key").offsetWidth ;
+  document.getElementById("black-eb-key").classList.add("shadow-black-key");
+}
+
+function blackGB() {
+  document.getElementById("black-gb-key").classList.remove("shadow-black-key");
+  document.getElementById("black-gb-key").offsetWidth ;
+  document.getElementById("black-gb-key").classList.add("shadow-black-key");
+}
+
+
+function blackAB() {
+  document.getElementById("black-ab-key").classList.remove("shadow-black-key");
+  document.getElementById("black-ab-key").offsetWidth ;
+  document.getElementById("black-ab-key").classList.add("shadow-black-key");
+}
+
+
+function blackBB() {
+  document.getElementById("black-bb-key").classList.remove("shadow-black-key");
+  document.getElementById("black-bb-key").offsetWidth ;
+  document.getElementById("black-bb-key").classList.add("shadow-black-key");
+}
+
 
 //adding buttons event listeners
 document.getElementById("audioBingerButton").addEventListener("click", function()
@@ -206,3 +242,89 @@ document.getElementById("shaolinButton").addEventListener("click", function() {
     activeSound = audio_shaolin;
   }
 });
+
+//adding event listeners for keypress event of piano keys
+
+document.addEventListener("keypress",function(event){
+
+  makePianoSound(event.key);
+
+});
+
+function makePianoSound(key)
+{
+  switch(key){
+    case "a":
+      var c5 = new Audio("sounds/C5.ogg");
+      c5.play();
+      whiteC();
+      break;
+
+    case "s":
+      var d5 = new Audio("sounds/D5.ogg");
+      d5.play();
+      whiteD();
+      break;
+
+    case "d":
+      var e5 = new Audio("sounds/E5.ogg");
+      e5.play();
+      whiteE();
+      break;
+
+    case "f":
+      var f5 = new Audio("sounds/F5.ogg");
+      f5.play();
+      whiteF();
+      break;
+
+    case "g":
+      var g5 = new Audio("sounds/G5.ogg");
+      g5.play();
+      whiteG();
+      break;
+
+    case "h":
+      var a5 = new Audio("sounds/A5.ogg");
+      a5.play();
+      whiteA();
+      break;
+
+    case "j":
+      var b5 = new Audio("sounds/B5.ogg");
+      b5.play();
+      whiteB();
+      break;
+
+    case "w":
+      var cDiyez = new Audio("sounds/cDiyez_5.ogg");
+      cDiyez.play();
+      blackDB();
+      break ;
+
+    case "e":
+      var dDiyez = new Audio("sounds/dDiyez_5.ogg");
+      dDiyez.play();
+      blackEB();
+      break;
+
+    case "t":
+      var fDiyez = new Audio("sounds/fDiyez_5.ogg");
+      fDiyez.play();
+      blackGB();
+      break;
+
+    case "y":
+      var gDiyez = new Audio("sounds/gDiyez_5.ogg");
+      gDiyez.play();
+      blackAB();
+      break;
+
+    case "u":
+      var aDiyez = new Audio("sounds/aDiyez_5.ogg");
+      aDiyez.play();
+      blackBB();
+      break;
+  }
+
+}
