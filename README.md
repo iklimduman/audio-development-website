@@ -4,6 +4,7 @@
 <li> This page is a audio visualizer page that allows users to play piano by their keyboard.
 <li> User can choose a beat and play. When beat starts audio visualizer begins
 <li> User can play piano on screen by keyboard keys while chosen beat playing 
+  <li> This page written with VanillaJS
 </ul>
 
 <h2> TODO </h2>
